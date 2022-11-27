@@ -28,9 +28,9 @@ button {
   border: none;
   border-radius: 15px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  height: 10%;
+  height: auto;
   width: 40%;
-  top: 80%;
+  top: 6500%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -45,20 +45,20 @@ button:hover {
 button:active {
   background-color: rgba(0, 58, 105, 0.747);
   transform: translateY(4px);
-  top: 73%;
+  top: 6000%;
   left: 30%;
   -ms-transform: translate(-50%, -50%);
 }
 
 input {
-  background-color: rgb(243, 243, 243);
+  background-color: rgb(0, 217, 255);
   width: 50%;
   position: absolute;
-  top: 2.5cm;
+  top: 3.0cm;
   left: 25%;
-  height: 3%;
+  height: 250%;
   font-family: sans-serif;
-  font-size: 130%;
+  font-size: 93%;
   color: rgb(0, 0, 0);
   text-align: center;
   border-radius: 20px;
@@ -66,9 +66,9 @@ input {
 
 img {
   position: absolute;
-  width: 400px;
-  height: 400px;
-  top: 45%;
+  width: 250px;
+  height: 250px;
+  top: 4000%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);

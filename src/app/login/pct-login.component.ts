@@ -8,26 +8,24 @@ import { pctLogoData } from '../image-data';
   styleUrls: ['./pct-login.component.css'],
 })
 export class PctLoginComponent implements OnInit {
-  // This is how you can add images in stackblitz: Put the data url into a separate code file, then make it a field on your component
-  // then use the field in your html img tag, as you can see in pct-login
-  pctlogo = pctLogoData;
-
   userName = '';
+  pctlogo = pctLogoData;
   constructor(private router: Router) {}
 
   ngOnInit() {
-    // TODO check if there is a "current-user" stored in localStorage
-    // if yes, navigate to the main menu using this.navigateToMainMenu()
+    const cu = localStorage['curretn-user'];
+    if (cu != null && cu.length > 0) {
+      this.router.navigate(['/']);
+    }
   }
 
   loginHandler() {
-    // TODO
-    // 1. set "current-user" to the userName in localStorage
-    // 2. call this.navigateToMainMenu() to leave the login page
-    // 3. if userName is an empty string show an alert("Your message")
-  }
-
-  navigateToMainMenu() {
-    this.router.navigate(['/']);
+    if (this.userName.length > 0) {
+      localStorage['current-user'] = this.userName;
+      this.router.navigate(['/']);
+    }
+    else{
+      alert('Bitte gebe dienen Namen ein!')
+    }
   }
 }

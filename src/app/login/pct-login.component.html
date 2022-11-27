@@ -1,7 +1,10 @@
-LOGIN TODO
-<br />
-You need to setup an input bound to userName. <br />
-You need to setup a button with clickbound to loginhandler() <br />
-There already is some css, but you might want to make your own style <br />
 
-<img [src]="pctlogo" />
+<p>Für wen werden Punkte gesammelt?<p>
+  <body>
+    <div>
+      <input [(ngModel)]="userName" type="text" />
+
+      <button (click)="loginHandler()">Login, los geht´s</button>
+     </div>
+     <img [src]="pctlogo" />
+  </body>
